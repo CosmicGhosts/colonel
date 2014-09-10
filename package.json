@@ -1,0 +1,27 @@
+{
+  "name": "cyclone",
+  "version": "0.1.0",
+  "description": "a simple cloning module that work with cyclical structures",
+  "main": "./lib/index.js",
+  "scripts": {
+    "cc": "./node_modules/.bin/lsc -o lib -c src/*.ls",
+    "test-cc": "./node_modules/.bin/lsc -o lib-test -c test/*.ls",
+    "pretest": "npm run-script cc && npm run-script test-cc",
+    "test": "./node_modules/.bin/mocha lib-test/*.js",
+    "prepublish": "npm run-script cc"
+  },
+  "keywords": [
+    "cloning",
+    "deep cloning",
+    "cyclone"
+  ],
+  "author": "seanstrom",
+  "license": "ISC",
+  "devDependencies": {
+    "LiveScript": "^1.2.0",
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.5.0"
+  }
+}
