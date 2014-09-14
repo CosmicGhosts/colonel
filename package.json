@@ -1,6 +1,6 @@
 {
-  "name": "cyclone",
-  "version": "0.1.0",
+  "name": "colonel",
+  "version": "0.0.1",
   "description": "a simple cloning module that work with cyclical structures",
   "main": "./lib/index.js",
   "scripts": {
