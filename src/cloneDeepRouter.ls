@@ -1,4 +1,3 @@
-map = require './map'
 cloneDeepObject = require './cloneDeepObject'
 cloneDeepArray = require './cloneDeepArray'
 
@@ -16,7 +15,7 @@ methods =
   '[object Number]': cloneDeepDefault
   '[object String]': cloneDeepDefault
 
-cloneDeepRouter = (value, traversedMap = map()) ->
+cloneDeepRouter = (value, traversedMap) ->
   type = toString value
   method = methods[type]
   if method

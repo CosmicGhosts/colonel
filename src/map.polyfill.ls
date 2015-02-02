@@ -1,5 +1,5 @@
 class Map
-  (num) ->
+  ->
     @traversed = []
     @cloned = []
 

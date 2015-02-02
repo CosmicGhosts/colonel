@@ -1,6 +1,10 @@
 cloneDeepRouter = require './cloneDeepRouter'
+Map = require './map'
 
 cloneDeep = (value) ->
-  cloneDeepRouter value
+  traversedMap = Map()
+  clone = cloneDeepRouter value, traversedMap
+  delete! traversedMap
+  clone
 
 module.exports = cloneDeep
